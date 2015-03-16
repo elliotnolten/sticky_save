@@ -1,0 +1,102 @@
+html,
+body,
+#content_wrapper {
+  height: 100%;
+}
+.sb-button.sb-plus a:after {
+  content: "";
+  display: block;
+  width: calc(98%);
+  height: calc(99%);
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  background: none;
+  border-radius: 0.25em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+.sb-button.sb-plus a:active:after {
+  display: none;
+}
+.sb-button.sb-plus a {
+  border: 1px solid #FFF;
+}
+.sb-button:before {
+  transition: all 200ms cubic-bezier(0.3, -1.41, 0.64, 2.04);
+  -webkit-transition: all 200ms cubic-bezier(0.3, -1.41, 0.64, 2.04);
+  -moz-transition: all 200ms cubic-bezier(0.3, -1.41, 0.64, 2.04);
+}
+.sb-button:before {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+}
+.sb-button.animate:before {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+}
+.submit {
+  position: relative;
+  width: 75px;
+  height: 29px;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+.submit.sb-button a {
+  padding-left: 0.625em;
+  width: 100%;
+  display: block;
+}
+.submit .loader-bg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #5c85d6;
+  z-index: 0;
+}
+.submit .loader {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  background: #3366cc;
+}
+.submit.animate .loader-bg {
+  display: block;
+}
+.submit.animate a {
+  width: 100%;
+  height: 100%;
+  background: none;
+  position: absolute;
+  z-index: 2;
+}
+.submit.done {
+  background: #3366cc;
+}
+.submit.sb-check:before {
+  transition: all 200ms cubic-bezier(0.3, -1.41, 0.64, 2.04);
+  -webkit-transition: all 200ms cubic-bezier(0.3, -1.41, 0.64, 2.04);
+  -moz-transition: all 200ms cubic-bezier(0.3, -1.41, 0.64, 2.04);
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  display: inline-block;
+  line-height: 29px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.submit.done.sb-check:before {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+}
